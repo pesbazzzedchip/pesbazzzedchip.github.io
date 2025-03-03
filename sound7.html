@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звук 7</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282c34;
+        }
+        #playButton {
+            width: 100vw; /* 100% ширины окна */
+            height: 100vh; /* 100% высоты окна */
+            background-color: #61dafb;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="playButton">Воспроизвести звук</button>
+    <audio id="sound" src="sound7.mp3"></audio>
+
+    <script>
+        const button = document.getElementById('playButton');
+        const sound = document.getElementById('sound');
+
+        button.addEventListener('click', () => {
+            sound.currentTime = 0; // Сбросить время воспроизведения
+            sound.play(); // Воспроизвести звук
+        });
+    </script>
+</body>
+</html>
